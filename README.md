@@ -5,3 +5,6 @@ Convert this:
 
 To this!
 ![image](image/out/biscuit_ascii.jpg)
+
+Or even this!
+![image](image/out/biscuit_braille.jpg)

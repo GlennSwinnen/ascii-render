@@ -204,3 +204,10 @@ class Pipeline():
                 image, result = step.show_process(image, cmap=cmap)
 
             self.image_sink(image, result)
+
+    def show_final(self, cmap="gray"):
+        for image in self.image_source():
+            for step in self.steps[:-1]:
+                image, result = step.process(image)
+            image, result = self.steps[-1].show_process(image, cmap=cmap)
+            self.image_sink(image, result)
